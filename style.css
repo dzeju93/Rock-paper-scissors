@@ -1,0 +1,61 @@
+* {
+    background-color: rgb(61, 61, 61);
+    color: yellowgreen;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    font-size: 80px;
+    background-color: rgb(29, 29, 29);
+    height: 150px;
+    margin: 0px;
+    padding: 30px;
+}
+
+/* SCOREBOARD */
+.scoreboard { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.score-info {
+font-weight: bold;
+font-size: xx-large;
+padding-bottom: 20px;
+}
+.score-massage {
+    font-weight: bold;
+    font-size: x-large;
+    }
+
+.score-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.score-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.sign {
+font-size: 100px;
+}
+
+.score {
+    font-size: x-large;
+    padding: 20px;
+}
+
+/* BUTTONS */
+
