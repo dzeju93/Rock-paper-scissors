@@ -1,0 +1,32 @@
+* {
+    background-color: rgb(207, 177, 132);
+}
+.reset {
+    display: none;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winnerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.computerSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
