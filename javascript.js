@@ -30,10 +30,10 @@ function playerChoice() {
     let check = validateInput(input);
     while (check == false) {
         input = prompt(
-            "Type rock, paper or scissors:"
+            "Type rock, paper or scissors. Type again:"
         );
         while (input == null) {
-            input = prompt("Type rock, paper or scissors:")
+            input = prompt("Type rock, paper or scissors. Type again:")
         }
         input = input.toLowerCase();
         check = validateInput(input);
