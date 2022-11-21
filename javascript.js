@@ -3,13 +3,12 @@ const winners = [];
 
 function resetGame() {
     winners = []
-    document.querySelector(".playerScore").textContent = "Score: 0";
-    document.querySelector(".computerScore").textContent = "Score: 0";
+    document.querySelector(".playerScore").textContent = "Player score: 0";
+    document.querySelector(".computerScore").textContent = "Computer score: 0";
     document.querySelector(".ties").textContent = "Ties: 0";
     document.querySelector(".winner").textContent = "";
     document.querySelector(".playerChoice").textContent = "";
     document.querySelector(".computerChoice").textContent = "";
-    document.querySelector(".reset").style.display = "none";
 }
 
 function startGame() {
@@ -27,7 +26,7 @@ function startGame() {
 function playRound(playerChoice) {
     let wins = checkWins();
     if (wins >= 5) {
-        return;
+        return alert(`Winner is: ${winner}`);
     }
 
     const computerChoice = computerSelect();
@@ -40,17 +39,6 @@ function playRound(playerChoice) {
         if(wins == 5){
             displayEnd()
     }
-}
-
-function displayEnd() {
-    let playerWins = winners.filter((item) => item == "Player").length;
-
-    if(playerWins == 5){
-        document.querySelector(".winner").textContent = 'You Won 5 games, Congrats!'
-    } else {
-        document.querySelector(".winner").textContent = 'Sorry, the Compyter won 5 times.'
-    }
-    document.querySelector(".reset").style.display = "flex";
 }
 
 function displayRound(playerChoice,computerChoice,winner){
@@ -67,15 +55,13 @@ function tallyWins() {
     let playerWins = winners.filter((item) => item == "Player").length;
     let computerWins = winners.filter((item) => item == "Computer").length;
     let ties = winners.filter((item) => item == "Tie").length;
-    document.querySelector(".playerScore").textContent = `Score: ${playerWins}`;
-    document.querySelector(".computerScore").textContent = `Score: ${computerWins}`;
+    document.querySelector(".playerScore").textContent = `Player score: ${playerWins}`;
+    document.querySelector(".computerScore").textContent = `Computer score: ${computerWins}`;
     document.querySelector(".ties").textContent = `Ties: ${ties}`;
 }
 
 function computerSelect() {
-    //todo - update the dom with the computer selection
     const choice = choices[Math.floor(Math.random() * choices.length)];
-
     return choice;
 }
 
@@ -98,16 +84,6 @@ function checkWinner(choiceP, choiceC) {
     } else {
         return 'Computer';
     }
-}
-
-function logWins() {
-    let playerWins = winners.filter((item) => item == "Player").length;
-    let computerWins = winners.filter((item) => item == "Computer").length;
-    let ties = winners.filter((item) => item == "Tie").length;
-    console.log("Results:");
-    console.log("Player Wins:", playerWins);
-    console.log("Computer Wins:", computerWins);
-    console.log("Ties:", ties);
 }
 
 startGame();
