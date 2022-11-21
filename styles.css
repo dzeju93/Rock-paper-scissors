@@ -1,0 +1,35 @@
+* {
+    background-color: rgb(207, 177, 132);
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result {
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+
+    
+}
+
+.playerImgs {
+    display: flex;
+    justify-content: center;
+}
+
+.winnerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
